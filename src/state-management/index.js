@@ -5,4 +5,4 @@ const store = createStore(reducer);
 
 export default store;
 
-// export * from './actions';
+export * from './actions';

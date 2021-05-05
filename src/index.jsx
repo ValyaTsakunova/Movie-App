@@ -6,6 +6,7 @@ import App from './App';
 import store from './state-management';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
 
 ReactDOM.render(
   <Provider store={store}>
