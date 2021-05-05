@@ -1,9 +1,10 @@
 import React from 'react';
+import SearchForm from './components/SearchForm';
 
 function App() {
   return (
-    <div>
-      <h1>My movie app</h1>
+    <div className="wrapper">
+      <SearchForm />
     </div>
   );
 }
