@@ -37,6 +37,7 @@ module.exports = {
         test: /\.(png|jpg|svg|jpeg)$/i,
         loader: 'file-loader',
       },
+      
     ],
   },
   plugins: [
@@ -55,4 +56,5 @@ module.exports = {
     hot: true,
     port: 8000,
   },
+  devtool: 'inline-source-map'
 };

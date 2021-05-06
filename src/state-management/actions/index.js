@@ -1,15 +1,11 @@
-export const searchMovie = (text) => ({
-    
-    type: 'SEARCH_MOVIE',
-    payload: text
+export const searchMovie = (text, parameter) => (dispatch, getState) => {
+    fetch(`https://reactjs-cdp.herokuapp.com/movies?search=${text}&searchBy=${parameter}&limit=50`)
+    .then(resp => resp.json()).then(data =>
+        dispatch({
+        type: 'SEARCH_MOVIE',
+        payload: {
+            data,
+        }
+    }))
+}
 
-});
-
-// export const fetchMovie = text => dispatch => {
-//     fetch(`https://reactjs-cdp.herokuapp.com/movies?search=${text}`)
-//     .then(res =>
-//         dispatch({
-//         type: 'FETCH_MOVIE',
-//         payload: res.data
-//     }))
-// }

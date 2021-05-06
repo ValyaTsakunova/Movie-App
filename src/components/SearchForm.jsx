@@ -1,38 +1,37 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { connect } from 'react-redux';
-import Movies from './Movies';
+import {  useDispatch, useSelector } from 'react-redux';
 import './SearchForm.css';
 
+import { searchMovie } from '../state-management/actions';
 
 function SearchForm(){
-    const [movies, setMovies] = useState([]);
+    const dispatch = useDispatch();
     const [parameter, setParameter] = useState('title');
     const [inputValue, setInputValue] = useState('');
     
     const onSubmit = (ev) => {
-        ev.preventDefault();
-
-        fetch(`https://reactjs-cdp.herokuapp.com/movies?search=${inputValue}&searchBy=${parameter}&limit=50`)
-        .then(data => data.json())
-        .then((res) => {
-            console.log(res);
-            setMovies(res.data)
-        });
-        // inputValue.length > 0 ? dispatch(inputValue) : setInputValue('');
-    
-        setInputValue('');
+      ev.preventDefault();
+      dispatch(searchMovie(inputValue, parameter));
+      setInputValue('');
     }
+
     const onTitleClick = () => {
       setParameter('title');
+      document.querySelector('.buttonTitle').classList.add('addBorder');
+      document.querySelector('.buttonGenre').classList.remove('addBorder');
     }
+
     const onGenreClick = () => {
       setParameter('genres');
+      document.querySelector('.buttonGenre').classList.add('addBorder');
+      document.querySelector('.buttonTitle').classList.remove('addBorder');
     }
 
     const onInputChange = (ev) => {
         setInputValue(ev.target.value);
     }
+    
   return (
     <>
       <form onSubmit={onSubmit}  className="form">
@@ -50,9 +49,8 @@ function SearchForm(){
              <Button type="submit" style={{ backgroundColor: '#800000', borderColor:'#4d0000'}} className="buttonSearch">Search</Button>  
           </div>
       </form>
-      {movies.length > 0 ? <Movies movies={movies} /> : ''}
     </>
   )
 };
 
-export default connect()(SearchForm);
+export default SearchForm;

@@ -41,6 +41,9 @@
     max-height: 30px;
     border-radius: 10px;
     background-color: #bb3636bc;
-    color:white
+    color:white;
 }
 
+.addBorder{
+    border: 2px solid white
+}
