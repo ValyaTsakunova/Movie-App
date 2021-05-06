@@ -1,8 +1,18 @@
-body{
-    background-color: rgba(17, 216, 123, 0.795);
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 
-}
 .wrapper{
     max-width: 100%;
-   
+}
+
+.title{
+    height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 120px;
+    margin-bottom: 50px;
+}
+
+.title p{
+    margin-top: 40px;
+    font-family: 'Dancing Script', cursive;
 }

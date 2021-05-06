@@ -1,6 +1,6 @@
 .movieContainer{
     max-width: 1400px;
-    margin: 20px auto;
+    margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

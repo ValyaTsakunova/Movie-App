@@ -1,20 +1,18 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './MovieCard.css'
 
 function MovieCard({movie}){
     return(
-        <Card>
-            <Card.Body>
-                <Card.Title>{movie.title}</Card.Title>
-                <Card.Text>
+        <div className="card">
+                <div className="movieTitle">{movie.title}</div>
+                <div className="movieImage">
                 <img src={movie.poster_path || ' '} ></img>
-                </Card.Text>
-                <Card.Text>{movie.genres[0]}</Card.Text>
-                <Card.Text>{movie.release_date.slice(0,4)}</Card.Text>
-                <Button variant="primary">Show more</Button>
-            </Card.Body>
-        </Card>
+                </div>
+                <div className="genre">Genre: {movie.genres.join(', ')}</div>
+                <div className="release">Release data: {movie.release_date}</div>
+                <Button style={{ backgroundColor: '#800000', borderColor:'#4d0000'}}>Show more</Button>
+        </div>
     )
 }
 

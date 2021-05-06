@@ -1,3 +1,8 @@
 body{
-    background-color: rgb(127, 140, 255);
+    background-image:  url(./image/img2.jpeg);
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

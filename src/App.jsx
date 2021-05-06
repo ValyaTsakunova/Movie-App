@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="wrapper">
-    <div className="header">Movie App</div>
+    <div className="title"><p>Movie App</p></div>
       <SearchForm />
     </div>
   );
