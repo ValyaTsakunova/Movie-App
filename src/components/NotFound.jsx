@@ -10,7 +10,8 @@ function NotFound(){
             setRedirect(true)
         }, 3000)
     }, [])
-    return redirect ? <Redirect to="/"/> : <h1 className="message"> The page could not be found</h1>
+    return <h1 className="message"> The page could not be found</h1>
+    // return redirect ? <Redirect to="/"/> : <h1 className="message"> The page could not be found</h1>
 }
 
 export default NotFound; 

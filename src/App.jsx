@@ -20,7 +20,6 @@ function App() {
           <NotFound/>
       </Route>
     </Switch>
-      
     </div>
   );
 }
