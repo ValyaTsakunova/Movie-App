@@ -2,6 +2,7 @@
 
 .wrapper{
     max-width: 100%;
+    position: relative;
 }
 
 .title{
@@ -9,7 +10,7 @@
     text-align: center;
     color: white;
     font-size: 120px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .title p{

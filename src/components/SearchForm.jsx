@@ -18,14 +18,10 @@ function SearchForm(){
 
     const onTitleClick = () => {
       setParameter('title');
-      // document.querySelector('.buttonTitle').classList.add('addBorder');
-      // document.querySelector('.buttonGenre').classList.remove('addBorder');
     }
 
     const onGenreClick = () => {
       setParameter('genres');
-      // document.querySelector('.buttonGenre').classList.add('addBorder');
-      // document.querySelector('.buttonTitle').classList.remove('addBorder');
     }
 
     const onInputChange = (ev) => {

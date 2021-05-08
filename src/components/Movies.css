@@ -5,3 +5,12 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.movieCount{
+    font-style: italic;
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-decoration: underline;
+}

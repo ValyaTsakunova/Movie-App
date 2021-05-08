@@ -2,8 +2,9 @@ import React from 'react';
 import {  useSelector } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import SearchForm from './components/SearchForm';
+import Sorting from './components/Options';
 import Movies from './components/Movies';
-import NotFound from './components/NotFound'
+import NotFound from './components/NotFound';
 import './App.css';
 
 function App() {
@@ -13,8 +14,11 @@ function App() {
     <div className="title"><p>Movie App</p></div>
     <Switch>
       <Route path="/" exact>
-          <SearchForm />
+          <>
+            <SearchForm />
+            <Sorting />
           {movies.length > 0 ? <Movies movies={movies}/> : ''}
+          </>
       </Route>
       <Route >
           <NotFound/>
