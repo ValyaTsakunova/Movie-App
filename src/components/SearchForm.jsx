@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 import {  useDispatch } from 'react-redux';
 import './SearchForm.css';
 
@@ -18,14 +18,14 @@ function SearchForm(){
 
     const onTitleClick = () => {
       setParameter('title');
-      document.querySelector('.buttonTitle').classList.add('addBorder');
-      document.querySelector('.buttonGenre').classList.remove('addBorder');
+      // document.querySelector('.buttonTitle').classList.add('addBorder');
+      // document.querySelector('.buttonGenre').classList.remove('addBorder');
     }
 
     const onGenreClick = () => {
       setParameter('genres');
-      document.querySelector('.buttonGenre').classList.add('addBorder');
-      document.querySelector('.buttonTitle').classList.remove('addBorder');
+      // document.querySelector('.buttonGenre').classList.add('addBorder');
+      // document.querySelector('.buttonTitle').classList.remove('addBorder');
     }
 
     const onInputChange = (ev) => {
@@ -42,10 +42,11 @@ function SearchForm(){
           className="searchInput" />
           
           <div className="buttons">
-          <p className="searchBy">Search by  </p>
-              <button className="buttonTitle" type="button" onClick={onTitleClick}>Title</button>
-              <button className="buttonGenre" type="button" onClick={onGenreClick}>Genre</button>
-            
+          <p className="searchBy">Search by </p>
+            <ButtonGroup aria-label="Basic example">
+                <Button variant="secondary" onClick={onTitleClick} className="buttonTitle" >Title</Button>
+                <Button variant="secondary" onClick={onGenreClick} className="buttonGenre">Genre</Button>
+              </ButtonGroup>
              <Button type="submit" style={{ backgroundColor: '#800000', borderColor:'#4d0000'}} className="buttonSearch">Search</Button>  
           </div>
       </form>

@@ -8,12 +8,13 @@ function MovieCard({movie}){
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
+    
     return(
         <>
         <div className="card">
                 <div className="movieTitle">{movie.title}</div>
                 <div className="movieImage">
-                <img src={movie.poster_path || ' '} ></img>
+                <img src={movie.poster_path} onError={() => ' '}/>
                 </div>
                 <div className="genre">Genre: {movie.genres.join(', ')}</div>
                 <div className="release">Release data: {movie.release_date}</div>
