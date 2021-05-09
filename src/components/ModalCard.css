@@ -1,0 +1,26 @@
+.modalTitle{
+    font-family: 'Dancing Script', cursive;
+}
+
+.modalBody{
+    background-image: url(../image/img4.jpeg);
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+    margin: 0px 10px;
+    flex-grow: 2;
+    min-height: 200px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.modalWindow{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalFooter{
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    flex-grow: 1;
+}
+

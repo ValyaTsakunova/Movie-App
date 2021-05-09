@@ -13,7 +13,7 @@ function App() {
     <div className="wrapper">
     <div className="title"><p>Movie App</p></div>
     <Switch>
-      <Route path="/" exact>
+      <Route path="/">
           <>
             <SearchForm />
             <Sorting />
