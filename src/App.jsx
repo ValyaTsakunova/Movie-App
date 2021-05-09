@@ -3,6 +3,7 @@ import {  useSelector } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import SearchForm from './components/SearchForm';
 import Sorting from './components/Options';
+import Limit from './components/Limit';
 import Movies from './components/Movies';
 import NotFound from './components/NotFound';
 import './App.css';
@@ -15,8 +16,11 @@ function App() {
     <Switch>
       <Route path="/">
           <>
+          <div className="header">
+            <Limit />
             <SearchForm />
             <Sorting />
+          </div>
           {movies.length > 0 ? <Movies movies={movies}/> : ''}
           </>
       </Route>

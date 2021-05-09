@@ -20,9 +20,9 @@ function MovieCard({movie}){
                 </div>
                 <div className="genre">Genre: {movie.genres.join(', ')}</div>
                 <div className="release">Release data: {movie.release_date}</div>
-                <Button style={{ backgroundColor: '#800000', borderColor:'#4d0000'}} onClick={handleShow}><Link to={`/movie/${movie.id}`} className="showMore">Show more</Link></Button>
+                <Button style={{ backgroundColor: '#800000', borderColor:'#4d0000'}} onClick={handleShow}><Link to={`/movie${movie.id}`} className="showMore">Show more</Link></Button>
         </div>
-        <Route path={`/movie/${movie.id}`} strict>
+        <Route path={`/movie${movie.id}`} strict>
             <ModalCard movie={movie} show={show} setShow={setShow}/>
         </Route>
         </>

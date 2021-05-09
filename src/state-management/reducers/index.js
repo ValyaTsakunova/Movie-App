@@ -1,7 +1,8 @@
 const initialState = {
     movies: [],
     sortBy: ' ',
-    sortOrder: ' '
+    sortOrder: ' ',
+    limit: '20'
 }
 
 export function reducer(state = initialState, action){
@@ -11,7 +12,7 @@ export function reducer(state = initialState, action){
             return {
                  ... state,
                  movies: action.payload.data.data,
-                }
+            }
         case 'SORT_BY_RELEASE_DATE':
             return {
                 ...state,
@@ -32,6 +33,21 @@ export function reducer(state = initialState, action){
                 ...state,
                 sortOrder: 'desc'
             }
+        case 'LIMIT_FIVE':
+            return {
+                ...state,
+                limit: '5'
+            }    
+        case 'LIMIT_TWENTY':
+            return {
+                ...state,
+                limit: '20'
+            } 
+        case 'LIMIT_FIFTY':
+            return {
+                ...state,
+                limit: '50'
+            }       
         default:
             return state
     }
