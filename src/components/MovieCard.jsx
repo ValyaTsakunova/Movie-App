@@ -7,13 +7,16 @@ function MovieCard({movie}){
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [loaded, setLoaded] = useState(false);
  
     return(
         <>
         <div className="card">
                 <div className="movieTitle">{movie.title}</div>
                 <div className="movieImage">
-                <img src={!movie.poster_path ? "https://native-english.com.ua/wp-content/uploads/2017/10/1457142148_1362161864.jpg" : movie.poster_path }/>
+                {loaded ? null : (<div className="defaultImg"/>)}
+                <img src={movie.poster_path} style={loaded ? {} : { display: 'none' }} onLoad={() => setLoaded(true)}/>
                 </div>
                 <div className="genre">Genre: {movie.genres.join(', ')}</div>
                 <div className="release">Release data: {movie.release_date}</div>
