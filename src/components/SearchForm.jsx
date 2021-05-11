@@ -9,6 +9,8 @@ function SearchForm(){
     const dispatch = useDispatch();
     const [parameter, setParameter] = useState('title');
     const [inputValue, setInputValue] = useState('');
+    const [title, setTitle] = useState(false);
+    const [genre, setGenre] = useState(false);
     
     const onSubmit = (ev) => {
       ev.preventDefault();
@@ -18,10 +20,14 @@ function SearchForm(){
 
     const onTitleClick = () => {
       setParameter('title');
+      setTitle(true);
+      setGenre(false);
     }
 
     const onGenreClick = () => {
       setParameter('genres');
+      setTitle(false);
+      setGenre(true);
     }
 
     const onInputChange = (ev) => {
@@ -39,10 +45,10 @@ function SearchForm(){
           
           <div className="buttons">
           <p className="searchBy">Search by </p>
-            <ButtonGroup aria-label="Basic example">
-                <Button variant="secondary" onClick={onTitleClick} className="buttonTitle" >Title</Button>
-                <Button variant="secondary" onClick={onGenreClick} className="buttonGenre">Genre</Button>
-              </ButtonGroup>
+            <div>
+                <button onClick={onTitleClick} className={title ? "active" : null} type="button">Title</button>
+                <button onClick={onGenreClick} className={genre ? "active" : null} type="button">Genre</button>
+              </div>
              <Button type="submit" style={{ backgroundColor: '#800000', borderColor:'#4d0000'}} className="buttonSearch">Search</Button>  
           </div>
       </form>
