@@ -7,3 +7,13 @@
     font-size: 20px;
     margin-left: 20px;
 }
+
+.options button{
+    border-radius: 7px;
+    background-color: rgba(165, 35, 35, 0.76);
+    margin: 5px 7px 5px 0px;
+    color: white;
+}
+.active{
+    border: 3px solid rgb(207, 114, 114);
+}
