@@ -41,7 +41,6 @@ function Sorting() {
 
   return (
     <div className="options">
-      <div>Options for your sort</div>
       <div>Sort by</div>
       <div>
         <button onClick={onReleaseClick} className={releaseButton ? "active" : null} >Release</button>
