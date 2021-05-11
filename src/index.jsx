@@ -7,7 +7,7 @@ import App from './App';
 import store from './state-management';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
+import './assets/styles/index.css';
 
 ReactDOM.render(
   <BrowserRouter>

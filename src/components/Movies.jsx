@@ -1,15 +1,14 @@
 import React from 'react';
 import MovieCard from './MovieCard';
-import './Movies.css'
+import '../assets/styles/Movies.css'
 
-function Movies({movies}){
-    // debugger;
-    return(
+function Movies({ movies }) {
+    return (
         <>
-        <div className="movieCount">Found {movies.length} movies</div>
-        <div className="movieContainer">
-            {movies.map(movie => <MovieCard key={movie.id} movie={movie}></MovieCard>)}
-        </div>
+            <div className="movieCount">Found {movies.length} movies</div>
+            <div className="movieContainer">
+                {movies.map(movie => <MovieCard key={movie.id} movie={movie}></MovieCard>)}
+            </div>
         </>
     )
 }

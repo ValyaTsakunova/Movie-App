@@ -1,0 +1,11 @@
+.limit{
+    text-align: right;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 900px){
+    .limit{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

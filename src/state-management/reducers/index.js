@@ -5,13 +5,12 @@ const initialState = {
     limit: '20'
 }
 
-export function reducer(state = initialState, action){
-    // debugger
-    switch(action.type){
+export function reducer(state = initialState, action) {
+    switch (action.type) {
         case 'SEARCH_MOVIE':
             return {
-                 ... state,
-                 movies: action.payload.data.data,
+                ...state,
+                movies: action.payload.data.data,
             }
         case 'SORT_BY_RELEASE_DATE':
             return {
@@ -37,17 +36,17 @@ export function reducer(state = initialState, action){
             return {
                 ...state,
                 limit: '5'
-            }    
+            }
         case 'LIMIT_TWENTY':
             return {
                 ...state,
                 limit: '20'
-            } 
+            }
         case 'LIMIT_FIFTY':
             return {
                 ...state,
                 limit: '50'
-            }       
+            }
         default:
             return state
     }

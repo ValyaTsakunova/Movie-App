@@ -52,3 +52,9 @@
 .active{
     border: 3px solid rgb(207, 114, 114);
 }
+
+@media screen and (max-width: 550px){
+    .form input{
+        width: 250px;
+    }
+}

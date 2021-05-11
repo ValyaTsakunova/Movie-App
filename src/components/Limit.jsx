@@ -2,21 +2,21 @@ import React from 'react';
 import { DropdownButton, Dropdown } from 'react-bootstrap';
 import store from '../state-management/index';
 
-import './Limit.css'
+import '../assets/styles/Limit.css'
 
-function Limit(){
+function Limit() {
     const onLimitFive = () => {
-        store.dispatch({type: 'LIMIT_FIVE'} );
+        store.dispatch({ type: 'LIMIT_FIVE' });
     }
 
     const onLimitTwenty = () => {
-        store.dispatch({type: 'LIMIT_TWENTY'} );
+        store.dispatch({ type: 'LIMIT_TWENTY' });
     }
 
     const onLimitFifty = () => {
-        store.dispatch({type: 'LIMIT_FIFTY'} );
+        store.dispatch({ type: 'LIMIT_FIFTY' });
     }
-    return(
+    return (
         <div className="limit">
             <DropdownButton id="dropdown-item-button" title="Limit" variant="secondary">
                 <Dropdown.Item as="button" onClick={onLimitFive}>5</Dropdown.Item>
